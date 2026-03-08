@@ -277,9 +277,11 @@ h3 {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .ramo {
-        font-size: 14px;
-        padding: 10px;
+    .ramo{
+        max-width: 100%;
+        font-size: clamp(11px, 2vw, 15px);
+        padding: 8px;
+        min-height: 60px;
     }
 
 }
