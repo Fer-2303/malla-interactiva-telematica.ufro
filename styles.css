@@ -1,7 +1,7 @@
 body {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;   
     padding: 20px;
-    overflow-x: auto;
+    overflow-x: hidden;
     background-color: #ffecfe;
 }
 
@@ -111,14 +111,26 @@ h3 {
     text-decoration: line-through;
 }
 
-@media (max-width: 1200px){
-    .ramo {
-        width:140px;
-        font-size: 12px;
+@media (max-width: 768px) {
+
+    .malla {
+        flex-direction: column;
+        gap: 30px;
     }
+
+    .anios{
+        grid-template-columns: 1fr;
+    }
+
     .niveles{
-    grid-template-columns: repeat(2, 1fr);
-}
+        grid-template-columns: 1fr;
+    }
+
+    .ramo{
+        max-width: 100%;
+        font-size: 14px;
+    }
+
 }
 
 .ramo.bloqueado {
@@ -257,4 +269,17 @@ h3 {
 #texto-progreso{
     font-weight:bold;
     margin-bottom:20px;
+}
+
+@media (max-width: 768px) {
+
+    .malla {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .ramo {
+        font-size: 14px;
+        padding: 10px;
+    }
+
 }
