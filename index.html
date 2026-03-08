@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Malla Interactiva</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="encabezado">
+    <img src="logo_ufro.png" alt="Logo" class="mi-logo">
+    <h1>Malla Ingeniería Civil Telemática UFRO</h1>
+    </div>
+    <div class="progreso-container">
+    <div id="barra-progreso"></div>
+</div>
+
+<p id="texto-progreso"></p>
+    <button id="resetear">Reiniciar malla</button>
+    <div class= "malla">
+        <div class="ciclo" num="UNO">
+            <h2>Primer Ciclo Formativo</h2>
+            <div class="anios">
+                <div class="anio">
+                    <h3>Primer Año</h3>
+                    <div class="niveles">
+                        <div class="nivel" nivel="n_1">
+                            <h3>Nivel 1</h3>
+
+                            <div class="ramo bloqueado"
+                                id="1" 
+                                data-prereq="">
+                                Ingeniería y Sociedad 
+                            </div>
+
+                            <div class="ramo bloqueado" 
+                                id="2" 
+                                data-prereq="">
+                                Fundamentos de cálculo 
+                            </div>
+
+                            <div class = "ramo bloqueado"
+                                id="3"
+                                data-prereq="">
+                                Álgebra
+                            </div>
+
+                            <div class = "ramo bloqueado"
+                                id="4"
+                                data-prereq="">
+                                Introducción a la Química
+                            </div>
+
+                            <div class = "ramo bloqueado"
+                                id= "5"
+                                data-prereq="">
+                                Habilidades Comunicativas en Ingeniería 
+                            </div>
+                        </div>
+
+                        <div class="nivel" nivel="n_2">
+                            <h3>Nivel 2</h3>
+
+                            <div class="ramo bloqueado" 
+                                id="6" 
+                                data-prereq="">
+                                Introducción al Diseño de Ingeniería
+                            </div>
+
+                            <div class="ramo bloqueado"
+                                id="7" 
+                                data-prereq="2">
+                                Cálculo en una Variable
+                            </div>
+
+                            <div class="ramo bloqueado"
+                                id="8"
+                                data-prereq="3">
+                                Matemáticas para la Computación
+                            </div>
+
+                            <div class="ramo bloqueado"
+                                id="9"
+                                data-prereq="2">
+                                Física 1
+                            </div>
+
+                            <div class="ramo bloqueado"
+                                id="10"
+                                data-prereq="4">
+                                Laboratorio de Ciencias
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="anio">
+                    <h3>Segundo Año</h3>
+                    <div class="niveles">
+                        <div class="nivel" nivel="n_3">
+                            <h3>Nivel 3</h3>
+
+                            <div class="ramo bloqueado"
+                                id="11"
+                                data-prereq="">
+                                Fundamentos de Ecodiseño 
+                            </div>
+
+                            <div class="ramo bloqueado"
+                                id="12"
+                                data-prereq="7">
+                                Cálculo Multivariable
+                            </div>
+
+                            <div class="ramo bloqueado"
+                                id="13"
+                                data-prereq="3">
+                                Álgebra Lineal 
+                            </div>
+
+                            <div class="ramo bloqueado"
+                                id="14"
+                                data-prereq="7, 9">
+                                Física 2
+                            </div>
+
+                            <div class="ramo bloqueado"
+                                id="15"
+                                data-prereq="">
+                                Electivo de Ingeniería
+                            </div>
+
+                            <div class="ramo bloqueado"
+                                id="16"
+                                data-prereq="10">
+                                Taller de Programación
+                            </div>
+                        </div>
+
+                        <div class="nivel" nivel="n_4">
+                            <h3>Nivel 4</h3>
+
+                            <div class="ramo bloqueado"
+                                id="17"
+                                data-prereq="6, 11">
+                                Taller de Diseño de Ingeniería
+                            </div>
+
+                            <div class="ramo bloqueado"
+                                id="18"
+                                data-prereq="12">
+                                Probabilidades y Estadística para Ingeniería 
+                            </div>
+
+                            <div class="ramo bloqueado"
+                                id="19"
+                                data-prereq="13">
+                                Ecuaciones Diferenciales
+                            </div>
+
+                            <div class="ramo bloqueado"
+                                id="21"
+                                data-prereq="16">
+                                Estructura de Datos y Algoritmos
+                            </div>
+
+                            <div class="ramo bloqueado"
+                                id="20"
+                                data-prereq="12, 14">
+                                Física 3
+                            </div>
+
+                            <div class="ramo bloqueado"
+                                id="22"
+                                data-prereq="">
+                                Electivo de Formación General 1
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="ciclo" num="DOS">
+            <h2>Segundo Ciclo Formativo</h2>
+            <div class="anios">
+                <div class="anio">
+                    <h3>Tercer año</h3>
+                    <div class="niveles">
+                        <div class="nivel" nivel="n_5">
+                            <h3>Nivel 5</h3>
+
+                            <div class="ramo bloqueado"
+                                id="23"
+                                data-prereq="6">
+                                Economía y Finanzas Empresariales
+                            </div>
+
+                            <div class="ramo bloqueado"
+                                id="24"
+                                data-prereq="19">
+                                Herramientas de Analisis de Señales 
+                            </div>
+
+                            <div class="ramo bloqueado"
+                                id="25"
+                                data-prereq="20">
+                                Ingeniería Electromagnética
+                            </div>
+
+                            <div class="ramo bloqueado"
+                                id="26"
+                                data-prereq="16">
+                                Internet y Sistemas Operativos 
+                            </div>
+
+                            <div class="ramo bloqueado"
+                                id="27"
+                                data-prereq="21">
+                                Protocolos de Comunicación y Sistemas Enbebidos
+                            </div>
+
+                            <div class="ramo bloqueado"
+                                id="28"
+                                data-prereq="">
+                                Electivo de Formación General 2
+                            </div>
+                        </div>
+
+                        <div class="nivel" nivel="n_6">
+                            <h3>Nivel 6</h3>
+
+                            <div class="ramo bloqueado"
+                                id="29"
+                                data-prereq="17">
+                                Formulación y Evaluación de Proyectos
+                            </div>
+                            <div class="ramo bloqueado"
+                                id="30"
+                                data-prereq="26">
+                            Base de Datos
+                            </div>
+
+                            <div class="ramo bloqueado"
+                                id="31"
+                                data-prereq="18">
+                                Teoría de Información
+                            </div>
+
+                            <div class="ramo bloqueado"
+                                id="32"
+                                data-prereq="25">
+                                Electrónica 1
+                            </div>
+
+                            <div class="ramo bloqueado"
+                                id="33"
+                                data-prereq="21">
+                                Programación Avanzada y Aplicaciones Moviles
+                            </div>
+
+                            <div class="ramo bloqueado"
+                                id="34"
+                                data-prereq="">
+                                Electivo de Formación General 3
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="anio">
+                    <h3>Cuarto Año</h3>
+                    <div class="niveles">
+                        <div class="nivel" nivel="n_7">
+                            <h3>Nivel 7</h3>
+
+                            <div class="ramo bloqueado"
+                                id="35"
+                                data-prereq="23">
+                                Diseño de Negocios Innovadores
+                            </div>
+
+                            <div class="ramo bloqueado"
+                                id="36"
+                                data-prereq="24">
+                                Procesamiento Digital de Señales
+                            </div>
+
+                            <div class="ramo bloqueado"
+                                id="37"
+                                data-prereq="31">
+                                Sistemas de Comunicaciones
+                            </div>
+
+                            <div class="ramo bloqueado"
+                                id="38"
+                                data-prereq="32">
+                                Electrónica 2
+                            </div>
+
+                            <div class="ramo bloqueado"
+                                id="39"
+                                data-prereq="27">
+                                Redes de Datos
+                            </div>
+
+                            <div class="ramo bloqueado"
+                                id="40"
+                                data-prereq="">
+                                Electivo de Formación General 4
+                            </div>
+                        </div>
+
+                        <div class="nivel"  nivel="n_8">
+                            <h3>Nivel 8</h3>
+
+                            <div class="ramo bloqueado"
+                                id="41"
+                                data-prereq="29">
+                                Taller de Empresas Tecnológicas
+                            </div>
+
+                            <div class="ramo bloqueado"
+                                id="42"
+                                data-prereq="37">
+                                Comunicaciones Digitales
+                            </div>
+
+                            <div class="ramo bloqueado"
+                                id="43"
+                                data-prereq="38">
+                                Sistemas Digitales
+                            </div>
+
+                            <div class="ramo bloqueado"
+                                id="44"
+                                data-prereq="39">
+                                Tecnología y Servicios de Internet
+                            </div>
+
+                            <div class="ramo bloqueado"
+                                id="45"
+                                data-prereq="30, 33">
+                                Tópicos de Ingeniería de Software y Desarrollo Web
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="ciclo" num="TRES">
+            <h2>Tercer Ciclo Formativo</h2>
+            <div class="anios">
+                <div class="anio">
+                    <h3>Quinto Año</h3>
+                    <div class="niveles">
+                        <div class="nivel" nivel="n_9">
+                            <h3>Nivel 9</h3>
+
+                            <div class="ramo bloqueado"
+                                id="46"
+                                data-prereq="43, 45">
+                                Diseño de Proyectos de Ingeniería Telemática
+                            </div>
+
+                            <div class="ramo bloqueado"
+                                id="47"
+                                data-prereq="44">
+                                Comunicaciones Inalámbricas
+                            </div>
+
+                            <div class="ramo bloqueado"
+                                id="48"
+                                data-prereq="">
+                                Electivo de especialidad 1
+                            </div>
+
+                            <div class="ramo bloqueado"
+                                id="49"
+                                data-prereq="44">
+                                Computación en la Nube y Ciberseguridad
+                            </div>
+
+                            <div class="ramo bloqueado"
+                                id="50"
+                                data-prereq="">
+                                Electivo de Especialidad 2
+                            </div>
+
+                            <div class="ramo bloqueado"
+                                id="51"
+                                data-prereq="43, 45">
+                                Interenet de las Cosas y Computación en el Borde
+                            </div>
+                        </div>
+
+                        <div class="nivel" nivel="n_10">
+                            <h3>Nivel 10</h3>
+
+                            <div class="ramo bloqueado"
+                                id="52"
+                                data-prereq="41,42,43,44,45">
+                                Capstone Multidiciplinario
+                            </div>
+
+                            <div class="ramo bloqueado"
+                                id="53"
+                                data-prereq="42">
+                                Comunicaciones Ópticas
+                            </div>
+
+                            <div class="ramo bloqueado"
+                                id="54"
+                                data-prereq="">
+                                Electivo de Especialidad 3
+                            </div>
+
+                            <div class="ramo bloqueado"
+                                id="55"
+                                data-prereq="">
+                                Electivo de Especialidad
+                            </div>
+
+                            <div class="ramo bloqueado"
+                                id="56"
+                                data-prereq="46">
+                                Gestión de Proyectos TI
+                            </div>
+
+                            <div class="ramo bloqueado"
+                                id="57"
+                                data-prereq="46">
+                                Ética Profesional
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="anio">
+                    <h3>Sexto Año</h3>
+                    <div class="niveles">
+                        <div class="nivel">
+                            <h3>Nivel 11</h3>
+
+                            <div class="ramo bloqueado"
+                                id="58"
+                                data-prereq="52, 53,54,55,56,57">
+                                Actividad de Titulación
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
